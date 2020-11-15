@@ -1,0 +1,42 @@
+version: '3'
+services:
+
+ proxy:
+  image: nginx:latest
+  ports:
+    - 8888:8888
+  links:
+    - backend
+  volumes:
+    - ./proxy/conf.d:/etc/nginx/conf.d
+    - ./logs/proxy-error.log:/var/log/nginx/error.log
+  networks:
+    - inside
+
+ backend:
+  image: nginx:latest
+  ports: 
+    - 80:80
+  links:
+    - php-fpm
+  volumes:
+    - ./public_html:/public_html
+    - ./backend/conf.d:/etc/nginx/conf.d
+    - ./logs/nginx-access.log:/var/log/nginx/access.log
+    - ./logs/nginx-error.log:/var/log/nginx/error.log
+  networks:
+    - inside
+#    - outside
+
+ php-fpm:
+  image: php:fpm
+  ports:
+    - 9000:9000
+  volumes:
+    - ./public_html:/public_html
+  networks:
+    - inside
+
+networks:
+# outside:
+ inside:

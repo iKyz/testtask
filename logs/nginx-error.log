@@ -1,0 +1,11 @@
+2020/11/14 17:48:01 [emerg] 1#0: unknown directive "fast_param" in /etc/nginx/sites-enabled/default:14
+2020/11/14 17:52:32 [emerg] 1#0: unknown directive "fast_param" in /etc/nginx/sites-enabled/default:14
+2020/11/14 19:16:18 [emerg] 1#0: unknown directive "fast_param" in /etc/nginx/sites-enabled/default:14
+2020/11/14 19:29:06 [error] 28#28: *2 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 192.168.111.181, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "172.16.111.55", referrer: "http://172.16.111.55/"
+2020/11/14 19:33:23 [error] 28#28: *3 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 192.168.111.181, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "172.16.111.55", referrer: "http://172.16.111.55/"
+2020/11/15 10:13:25 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/default.conf:11
+2020/11/15 10:17:16 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/default.conf:11
+2020/11/15 10:31:27 [error] 28#28: *1 "/usr/share/nginx/html/public/index.php" is not found (2: No such file or directory), client: 192.168.111.181, server: localhost, request: "GET / HTTP/1.1", host: "172.16.111.55:8888"
+2020/11/15 10:31:27 [error] 28#28: *1 open() "/usr/share/nginx/html/public/favicon.ico" failed (2: No such file or directory), client: 192.168.111.181, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "172.16.111.55:8888", referrer: "http://172.16.111.55:8888/"
+2020/11/15 15:51:31 [error] 28#28: *1 open() "/public_html/favicon.ico" failed (2: No such file or directory), client: 192.168.111.181, server: backend, request: "GET /favicon.ico HTTP/1.1", host: "172.16.111.55", referrer: "http://172.16.111.55/"
+2020/11/15 17:52:22 [error] 27#27: *1 open() "/public_html/favicon.ico" failed (2: No such file or directory), client: 192.168.111.181, server: backend, request: "GET /favicon.ico HTTP/1.1", host: "172.16.111.55", referrer: "http://172.16.111.55/"
